@@ -51,6 +51,9 @@ static const struct {
     { "OMX.google.h263.encoder", "mpeg4enc", "video_encoder.h263" },
     { "OMX.google.mpeg4.decoder", "mpeg4dec", "video_decoder.mpeg4" },
     { "OMX.google.mpeg4.encoder", "mpeg4enc", "video_encoder.mpeg4" },
+#ifdef STE_HARDWARE
+    { "OMX.ST.mp3.decoder", "ste_mp3dec", "audio_decoder.mp3" },
+#endif
     { "OMX.google.mp3.decoder", "mp3dec", "audio_decoder.mp3" },
 #ifdef STE_HARDWARE
     { "OMX.ST.mp3.decoder", "ste_mp3dec", "audio_decoder.mp3" },

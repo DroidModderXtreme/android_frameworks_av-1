@@ -586,6 +586,11 @@ status_t CameraSource::initWithCameraAccess(
     mMeta->setInt32(kKeySliceHeight, mVideoSize.height);
 #endif
     mMeta->setInt32(kKeyFrameRate,   mVideoFrameRate);
+
+#ifdef QCOM_HARDWARE
+    QCUtilityClass::helper_CameraSource_hfr(params, mMeta);
+#endif
+    mMeta->setInt32(kKeyFrameRate,   mVideoFrameRate);
     return OK;
 }
 
